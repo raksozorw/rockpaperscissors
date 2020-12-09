@@ -1,0 +1,325 @@
+/* Initial Setup */
+/* -------------------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  font-family: "JetBrains Mono", monospace;
+
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  background-image: radial-gradient(hsl(180, 15%, 33%), hsl(143, 19%, 13%));
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+h2 {
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+
+h3 {
+  font-size: 3rem;
+  color: hsl(229, 25%, 31%);
+}
+
+h4 {
+  font-weight: 600;
+  font-size: 1.5rem;
+  letter-spacing: 3px;
+  margin-bottom: 30px;
+}
+
+h5 {
+  font-size: 3rem;
+}
+
+h6 {
+  font-size: 2.5rem;
+}
+
+button {
+  background-color: white;
+  font-family: "JetBrains Mono", monospace;
+  color: hsl(214, 47%, 23%);
+  border: 2px solid white;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  margin: 20px 0px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+}
+
+.app {
+  display: grid;
+  place-items: center;
+  grid-template-rows: 1fr 2.2fr;
+}
+
+/* HEADER */
+/* ---------------------- */
+
+.header {
+  display: grid;
+  place-items: center end;
+  text-align: left;
+  grid-template-columns: 1fr 1fr;
+  border: 4px solid hsl(217, 16%, 45%);
+  border-radius: 25px;
+  width: 700px;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.title {
+  width: 100%;
+}
+
+.title h1 {
+  font-size: 1.3rem;
+}
+
+.score {
+  display: grid;
+  place-items: center;
+  background-color: white;
+  width: 150px;
+  height: 80%;
+  border-radius: 25px;
+  color: hsl(246, 97%, 63%);
+  padding: 20px 0px;
+  box-shadow: 2px 2px 2px;
+}
+
+@media screen and (max-width: 775px) {
+  .header {
+    width: 80%;
+  }
+}
+
+/* MAIN PAGE */
+/* -------------------------- */
+
+/* PLAYER SELECTOR */
+/* --------------------------------- */
+
+.player-selector {
+  position: relative;
+}
+
+.icons-map {
+  display: block;
+}
+
+.player-selector-icon {
+  margin: auto;
+  position: absolute;
+
+  height: 110px;
+  width: 110px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.player-selector-icon:active {
+  opacity: 0.7;
+}
+
+.player-selector-icon-inner {
+  background-color: white;
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+
+.scissors {
+  top: -30px;
+  left: 33%;
+  background-image: radial-gradient(hsl(39, 75%, 61%), hsl(40, 84%, 53%));
+}
+
+.spock {
+  top: 80px;
+  left: -30px;
+  background-image: radial-gradient(hsl(167, 59%, 53%), hsl(189, 58%, 57%));
+}
+
+.paper {
+  top: 80px;
+  right: -30px;
+  background-image: radial-gradient(hsl(230, 75%, 68%), hsl(230, 89%, 65%));
+}
+
+.lizard {
+  bottom: -30px;
+  right: 0;
+  background-image: radial-gradient(hsl(261, 67%, 65%), hsl(261, 72%, 63%));
+}
+
+.rock {
+  bottom: -30px;
+  left: 0;
+  background-image: radial-gradient(hsl(24, 71%, 52%), hsl(349, 70%, 56%));
+}
+
+/* FACE OFF */
+/* ------------------------------ */
+
+.face-off {
+  display: grid;
+  grid-template-rows: 1fr;
+  place-items: center;
+  margin: auto;
+  width: 800px;
+}
+
+.choices {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.result-and-replay {
+  display: grid;
+  place-items: center;
+}
+
+/* PLAY DETAILS  */
+/* ------------------------------------- */
+
+.large-img-circle-inner {
+  display: grid;
+  place-items: center;
+  background-color: white;
+  height: 200px;
+  width: 200px;
+  margin: auto;
+  border-radius: 50%;
+}
+
+.large-circle-outer {
+  display: grid;
+  place-items: center;
+  width: 240px;
+  height: 240px;
+  margin: auto;
+  border-radius: 50%;
+}
+
+.play-details .rock {
+  background-image: radial-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+}
+
+.play-details .paper {
+  background-image: radial-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+}
+
+.play-details .scissors {
+  background-image: radial-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+}
+
+.play-details .lizard {
+  background-image: radial-gradient(hsl(261, 73%, 60%), hsl(261, 72%, 63%));
+}
+
+.play-details .spock {
+  background-image: radial-gradient(hsl(189, 59%, 53%), hsl(189, 58%, 57%));
+}
+
+/* RULES MODAL */
+/* ----------------------------- */
+
+.open-modal-button-div {
+  width: 100%;
+  max-width: 1300px;
+  margin-bottom: 40px;
+}
+
+.open-modal-button-div button {
+  float: right;
+  margin: 0px 30px 0px 0px;
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+}
+
+.open-modal-button-div button:hover {
+  color: hsl(214, 47%, 23%);
+  background-color: white;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1040;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  opacity: 0.5;
+}
+
+.modal-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1050;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  outline: 0;
+}
+
+.modal {
+  z-index: 100;
+  background: white;
+  color: hsl(229, 25%, 31%);
+  position: relative;
+  margin: 100px auto;
+  border-radius: 5px;
+  max-width: 400px;
+  padding: 30px 30px 30px 30px;
+}
+
+.modal-header {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+  margin-bottom: 20px;
+}
+
+.modal-title {
+  width: 100%;
+  display: grid;
+  place-items: start;
+}
+
+.modal-button-div {
+  display: grid;
+  width: 100%;
+  place-items: end;
+}
+
+.modal button {
+  font-size: 2rem;
+  margin: 0;
+  padding: 0;
+  color: hsl(217, 16%, 45%);
+}
